@@ -63,6 +63,19 @@ document.querySelector('.b-9').addEventListener('click', () => {
 });
 
 document.querySelector('.b-10').addEventListener('click', () => {
-  let data = document.querySelector('.s-10').value;
-  document.querySelector('.out-10').innerHTML = data;
+  // let data = document.querySelector('.s-10').value;
+  // document.querySelector('.out-10').innerHTML = data;
+  document.querySelector('.s-10').value = 'winamp';
+});
+
+document.querySelector('.b-11').addEventListener('click', () => {
+  let data = document.querySelector('.t-11').value;
+  document.querySelector('.out-11').innerHTML = data;
+});
+
+document.querySelector('form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  const form = document.querySelector('form');
+  console.dir(form.elements.myselect.value);
+  form.reset(); // очистить форму
 });
